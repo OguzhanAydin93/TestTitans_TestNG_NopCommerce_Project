@@ -18,7 +18,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test
+    @Test(groups = {"Smoke,Regression"})
     public void US_508_Mert(){
 
     }
