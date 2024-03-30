@@ -3,8 +3,13 @@ package NopCommerce_Project;
 import Utility.BaseDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class Oguzhan_POM {
+
+    public Oguzhan_POM(){
+        PageFactory.initElements(BaseDriver.driver,this);
+    }
 
     @FindBy(linkText = "Log in")
     public WebElement login;
@@ -38,6 +43,22 @@ public class Oguzhan_POM {
 
     @FindBy(linkText = "Others ")
     public WebElement others;
+
+    @FindBy(linkText = "Apparel ")
+    public WebElement apparel;
+
+    @FindBy(linkText = "Shoes ")
+    public WebElement shoes;
+
+    @FindBy(linkText = "Clothing ")
+    public WebElement clothing;
+
+    @FindBy(linkText = "Accessories ")
+    public WebElement accessories;
+
+
+
+
 
 
 
