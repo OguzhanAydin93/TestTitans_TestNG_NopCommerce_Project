@@ -2,9 +2,12 @@ package NopCommerce_Project;
 
 import Utility.BaseDriver;
 import io.opentelemetry.api.baggage.propagation.W3CBaggagePropagator;
+import org.checkerframework.checker.units.qual.N;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Nuri_POM {
     public Nuri_POM() {PageFactory.initElements(BaseDriver.driver,this);}
