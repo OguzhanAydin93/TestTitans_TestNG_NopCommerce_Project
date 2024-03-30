@@ -18,5 +18,10 @@ public class NopCommerce extends BaseDriver {
 
     }
 
+    @Test
+    public void US_508_Mert(){
+
+    }
+
 
 }
