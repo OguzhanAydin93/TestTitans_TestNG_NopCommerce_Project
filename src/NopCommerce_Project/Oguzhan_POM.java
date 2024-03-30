@@ -20,7 +20,7 @@ public class Oguzhan_POM {
     @FindBy(css = "[id='Password']")
     public WebElement password;
 
-    @FindBy(linkText = "Computers ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[1]/a")
     public WebElement computers;
 
     @FindBy(linkText = "Desktops ")
@@ -32,7 +32,7 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Software ")
     public WebElement software;
 
-    @FindBy(linkText = "Electronics ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[2]/a")
     public WebElement electronics;
 
     @FindBy(linkText = "Camera & photo ")
@@ -44,7 +44,7 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Others ")
     public WebElement others;
 
-    @FindBy(linkText = "Apparel ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[3]/a")
     public WebElement apparel;
 
     @FindBy(linkText = "Shoes ")
@@ -56,16 +56,16 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Accessories ")
     public WebElement accessories;
 
-    @FindBy(linkText = "Digital downloads ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[4]/a")
     public WebElement digitalDownload;
 
-    @FindBy(linkText = "Books ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[5]/a")
     public WebElement books;
 
-    @FindBy(linkText = "Jewelry ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[6]/a")
     public WebElement jewelry;
 
-    @FindBy(linkText = "Gift Cards ")
+    @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[7]/a")
     public WebElement giftCards;
 
     @FindBy(css = "//div[@class='page-title']/h1")
