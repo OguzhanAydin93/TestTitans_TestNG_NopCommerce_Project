@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class NopCommerce extends BaseDriver {
 
     @Test
-    public void US_504_Nuri(){
+    public void US_501_Nuri(){
 
     }
 
