@@ -23,6 +23,7 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Computers ")
     public WebElement computers;
 
+
     @FindBy(linkText = "Desktops ")
     public WebElement desktops ;
 
@@ -67,6 +68,9 @@ public class Oguzhan_POM {
 
     @FindBy(linkText = "Gift Cards ")
     public WebElement giftCards;
+
+    @FindBy(css = "//div[@class='page-title']/h1")
+    public WebElement pageText;
 
 
 
