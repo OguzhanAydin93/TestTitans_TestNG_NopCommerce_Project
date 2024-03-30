@@ -32,13 +32,13 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Software ")
     public WebElement software;
 
-    @FindBy(linkText = "Electronics  ")
+    @FindBy(linkText = "Electronics ")
     public WebElement electronics;
 
-    @FindBy(linkText = "Camera & photo  ")
+    @FindBy(linkText = "Camera & photo ")
     public WebElement cameraAndPhoto;
 
-    @FindBy(linkText = "Cell phones  ")
+    @FindBy(linkText = "Cell phones ")
     public WebElement cellPhone;
 
     @FindBy(linkText = "Others ")
@@ -55,6 +55,20 @@ public class Oguzhan_POM {
 
     @FindBy(linkText = "Accessories ")
     public WebElement accessories;
+
+    @FindBy(linkText = "Digital downloads ")
+    public WebElement digitalDownload;
+
+    @FindBy(linkText = "Books ")
+    public WebElement books;
+
+    @FindBy(linkText = "Jewelry ")
+    public WebElement jewelry;
+
+    @FindBy(linkText = "Gift Cards ")
+    public WebElement giftCards;
+
+
 
 
 
