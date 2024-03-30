@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/mert_/IdeaProjects/TestTitans_TestNG_NopCommerce_Project1/src"><classes><class name="NopCommerce_Project.NopCommerce"><methods><include name="US_504_Nuri"/><include name="US_504_Oguzhan"/><include name="US_508_Mert"/></methods></class></classes></test></suite>

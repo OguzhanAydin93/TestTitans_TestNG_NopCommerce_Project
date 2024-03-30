@@ -17,4 +17,7 @@ public class Mert_POM {
 
     @FindBy (css = "[class='button-1 search-box-button']")
     public WebElement searchButton;
+
+    @FindBy (xpath = "//h2[@class='product-title']//a")
+    public WebElement productTitle;
 }
