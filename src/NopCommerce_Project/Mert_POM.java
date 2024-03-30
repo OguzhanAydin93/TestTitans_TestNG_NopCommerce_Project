@@ -34,6 +34,9 @@ public class Mert_POM {public Mert_POM() {PageFactory.initElements(BaseDriver.dr
     @FindBy (css = "[class='button-1 login-button']")
     public WebElement logIn;
 
+    @FindBy (xpath = "//h1[text()='Adobe Photoshop CS4']")
+    public WebElement text;
+
 
     public static void Login(String mail,String password){
         Mert_POM elements=new Mert_POM();
@@ -43,6 +46,7 @@ public class Mert_POM {public Mert_POM() {PageFactory.initElements(BaseDriver.dr
         BaseDriver.wait.until(ExpectedConditions.visibilityOf(elements.mailInput));
         bd.mySendKeys(elements.mailInput,mail);
         bd.mySendKeys(elements.passwordInput,password);
+        bd.myClick(elements.logIn);
 
     }
 }
