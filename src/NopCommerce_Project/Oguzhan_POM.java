@@ -27,6 +27,20 @@ public class Oguzhan_POM {
     @FindBy(linkText = "Software ")
     public WebElement software;
 
+    @FindBy(linkText = "Electronics  ")
+    public WebElement electronics;
+
+    @FindBy(linkText = "Camera & photo  ")
+    public WebElement cameraAndPhoto;
+
+    @FindBy(linkText = "Cell phones  ")
+    public WebElement cellPhone;
+
+    @FindBy(linkText = "Others ")
+    public WebElement others;
+
+
+
 
 
 
