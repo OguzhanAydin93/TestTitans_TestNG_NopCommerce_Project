@@ -15,8 +15,19 @@ public class Oguzhan_POM {
     @FindBy(css = "[id='Password']")
     public WebElement password;
 
-    @FindBy(css = "[class='button-1 login-button']")
-    public WebElement loginButton;
+    @FindBy(linkText = "Computers ")
+    public WebElement computers;
+
+    @FindBy(linkText = "Desktops ")
+    public WebElement desktops ;
+
+    @FindBy(linkText = "Notebooks ")
+    public WebElement notebooks;
+
+    @FindBy(linkText = "Software ")
+    public WebElement software;
+
+
 
 
 }
