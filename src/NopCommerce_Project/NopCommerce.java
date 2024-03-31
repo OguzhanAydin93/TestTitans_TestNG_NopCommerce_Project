@@ -119,20 +119,6 @@ public class NopCommerce extends BaseDriver {
         myAssert(elements.giftCards,"Gift Cards");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     @Test(groups = {"Smoke,Regression"})
