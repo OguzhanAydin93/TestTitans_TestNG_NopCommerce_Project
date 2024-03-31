@@ -91,6 +91,13 @@ public class NopCommerce extends BaseDriver {
         actions.moveToElement(elements.others).click().perform();
         myAssert(elements.pageText,"Others");
         myClick(elements.logo);
+        myClick(elements.apparel);
+        myAssert(elements.pageText,"Apparel");
+        myClick(elements.logo);
+        actions.moveToElement(elements.apparel).build().perform();
+        actions.moveToElement(elements.shoes).click().perform();
+        myAssert(elements.pageText,"Shoes");
+
 
 
 
