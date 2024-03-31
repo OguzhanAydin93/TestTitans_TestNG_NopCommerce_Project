@@ -11,9 +11,12 @@ public class Zehra_POM {
     }
     @FindBy(xpath = "//a[@class='ico-login']")
     public WebElement loginButton;
-    @FindBy(css = "[class='email valid']")
+    @FindBy(css = "[id='Email']")
     public WebElement email;
-    @FindBy(css = "[class='password valid']")
+    @FindBy(css = "[id='Password']")
     public WebElement password;
+    @FindBy(css = "[class='button-1 login-button']")
+    public WebElement submitLogin;
+
 
 }

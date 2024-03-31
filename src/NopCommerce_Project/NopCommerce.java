@@ -121,6 +121,11 @@ public class NopCommerce extends BaseDriver {
 
     }
 
+    @Test
+    public void US_507_Zehra(){
+
+    }
+
     @Test(groups = {"Smoke,Regression"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
