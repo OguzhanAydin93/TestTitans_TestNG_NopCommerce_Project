@@ -114,6 +114,9 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.logo);
         myClick(elements.jewelry);
         myAssert(elements.jewelry,"Jewelry");
+        myClick(elements.logo);
+        myClick(elements.giftCards);
+        myAssert(elements.giftCards,"Gift Cards");
 
 
 
