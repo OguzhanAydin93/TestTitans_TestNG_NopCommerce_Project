@@ -55,13 +55,9 @@ public class NopCommerce extends BaseDriver {
 
         Oguzhan_POM elements=new Oguzhan_POM();
 
-        driver.get("https://demo.nopcommerce.com/");
         Actions actions=new Actions(driver);
 
-        myClick(elements.login);
-        mySendKeys(elements.email,"techno+1@gmail.com");
-        mySendKeys(elements.password,"123456");
-        myClick(elements.loginButton);
+        elements.login();
         myClick(elements.computers);
         myAssert(elements.pageText,"Computers");
         myClick(elements.logo);

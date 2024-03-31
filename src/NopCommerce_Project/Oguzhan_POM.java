@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import static Utility.BaseDriver.driver;
 
 public class Oguzhan_POM {
 
@@ -78,6 +81,16 @@ public class Oguzhan_POM {
 
     @FindBy(css = "[class='header-logo']")
     public WebElement logo;
+
+    public void login() {
+        driver.navigate().to("https://demo.nopcommerce.com/");
+        BaseDriver baseDriver = new BaseDriver();
+        baseDriver.myClick(login);
+        baseDriver.mySendKeys(email, "techno+1@gmail.com");
+        baseDriver.mySendKeys(password, "123456");
+        baseDriver.myClick(loginButton);
+
+    }
 
 
 
