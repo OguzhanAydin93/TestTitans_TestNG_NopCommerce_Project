@@ -1,6 +1,9 @@
 package NopCommerce_Project;
 
 import Utility.BaseDriver;
+import com.beust.ah.A;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -52,6 +55,7 @@ public class NopCommerce extends BaseDriver {
         Oguzhan_POM elements=new Oguzhan_POM();
 
         driver.get("https://demo.nopcommerce.com/");
+        Actions actions=new Actions(driver);
 
         myClick(elements.login);
         mySendKeys(elements.email,"techno+1@gmail.com");
@@ -60,14 +64,21 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.computers);
         myAssert(elements.pageText,"Computers");
         myClick(elements.logo);
-        myClick(elements.desktops);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.desktops).click().perform();
         myAssert(elements.pageText,"Desktops");
         myClick(elements.logo);
-        myClick(elements.notebooks);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.notebooks).click().perform();
         myAssert(elements.pageText,"Notebooks");
         myClick(elements.logo);
-        myClick(elements.software);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.software).click().perform();
         myAssert(elements.pageText,"Software");
+        myClick(elements.logo);
+        myClick(elements.electronics);
+        myAssert(elements.pageText,"Electronics");
+        myClick(elements.logo);
 
 
 

@@ -2,6 +2,7 @@ package NopCommerce_Project;
 
 import Utility.BaseDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,6 +11,7 @@ public class Oguzhan_POM {
     public Oguzhan_POM(){
         PageFactory.initElements(BaseDriver.driver,this);
     }
+
 
     @FindBy(linkText = "Log in")
     public WebElement login;
@@ -26,37 +28,37 @@ public class Oguzhan_POM {
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[1]/a")
     public WebElement computers;
 
-    @FindBy(linkText = "Desktops ")
+    @FindBy(xpath = "//ul[@class='sublist first-level']//li[1]")
     public WebElement desktops ;
 
-    @FindBy(linkText = "Notebooks ")
+    @FindBy(xpath = "//ul[@class='sublist first-level']//li[2]")
     public WebElement notebooks;
 
-    @FindBy(linkText = "Software ")
+    @FindBy(xpath = "//ul[@class='sublist first-level']//li[3]")
     public WebElement software;
 
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[2]/a")
     public WebElement electronics;
 
-    @FindBy(linkText = "Camera & photo ")
+    @FindBy(linkText = "Camera & photo")
     public WebElement cameraAndPhoto;
 
-    @FindBy(linkText = "Cell phones ")
+    @FindBy(linkText = "Cell phones")
     public WebElement cellPhone;
 
-    @FindBy(linkText = "Others ")
+    @FindBy(linkText = "Others")
     public WebElement others;
 
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[3]/a")
     public WebElement apparel;
 
-    @FindBy(linkText = "Shoes ")
+    @FindBy(linkText = "Shoes")
     public WebElement shoes;
 
-    @FindBy(linkText = "Clothing ")
+    @FindBy(linkText = "Clothing")
     public WebElement clothing;
 
-    @FindBy(linkText = "Accessories ")
+    @FindBy(linkText = "Accessories")
     public WebElement accessories;
 
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[4]/a")
