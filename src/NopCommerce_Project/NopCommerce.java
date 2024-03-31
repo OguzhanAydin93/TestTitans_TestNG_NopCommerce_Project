@@ -49,7 +49,7 @@ public class NopCommerce extends BaseDriver {
     @Test
     public void US_504_Oguzhan(){
 
-        Oguzhan_POM oguzhanPom=new Oguzhan_POM();
+        Oguzhan_POM elements=new Oguzhan_POM();
 
 
     }
