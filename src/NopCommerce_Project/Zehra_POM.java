@@ -36,6 +36,10 @@ public class Zehra_POM {
     public WebElement rams;
     @FindBy(xpath = "//input[@name='product_attribute_3']")
     public List<WebElement> hdd;
+    @FindBy(xpath = "//*[text()='Add to cart']")
+    public WebElement addToCard;
+    @FindBy(css = "[class='content']")
+    public WebElement addedMsg;
 
     public void login() {
         driver.navigate().to("https://demo.nopcommerce.com/");

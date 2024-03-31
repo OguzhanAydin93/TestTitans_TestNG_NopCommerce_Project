@@ -140,6 +140,8 @@ public class NopCommerce extends BaseDriver {
         myJSClick(elements.buildComp);
         elements.ramSelect();
         elements.hddSelect();
+        myClick(elements.addToCard);
+        Assert.assertTrue(elements.addedMsg.isDisplayed(), "Ürün eklenemedi.");
 
 
     }
