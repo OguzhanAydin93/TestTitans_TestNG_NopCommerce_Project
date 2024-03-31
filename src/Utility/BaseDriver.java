@@ -69,7 +69,7 @@ public class BaseDriver {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public void JSClick(WebElement element){
+    public void myJSClick(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) BaseDriver.driver;
         js.executeScript("arguments[0].click();", element);
     }

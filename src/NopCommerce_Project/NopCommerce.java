@@ -62,6 +62,12 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.logo);
         myClick(elements.desktops);
         myAssert(elements.pageText,"Desktops");
+        myClick(elements.logo);
+        myClick(elements.notebooks);
+        myAssert(elements.pageText,"Notebooks");
+        myClick(elements.logo);
+        myClick(elements.software);
+        myAssert(elements.pageText,"Software");
 
 
 

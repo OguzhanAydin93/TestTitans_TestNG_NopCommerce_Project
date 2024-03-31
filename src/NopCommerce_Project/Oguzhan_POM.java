@@ -71,7 +71,7 @@ public class Oguzhan_POM {
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[7]/a")
     public WebElement giftCards;
 
-    @FindBy(css = "//div[@class='page-title']/h1")
+    @FindBy(xpath = "//div[@class='page-title']/h1")
     public WebElement pageText;
 
     @FindBy(css = "[class='header-logo']")
