@@ -51,6 +51,15 @@ public class NopCommerce extends BaseDriver {
 
         Oguzhan_POM elements=new Oguzhan_POM();
 
+        myClick(elements.login);
+        mySendKeys(elements.email,"techno+1@gmail.com");
+        mySendKeys(elements.password,"123456");
+        myClick(elements.loginButton);
+
+
+
+
+
 
     }
 
