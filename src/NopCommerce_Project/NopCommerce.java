@@ -125,12 +125,20 @@ public class NopCommerce extends BaseDriver {
     @Test
     public void US_507_Zehra(){
         Zehra_POM elements=new Zehra_POM();
+        Actions actionDriver = new Actions(driver);
         elements.login();
 
         for (WebElement tabMenu : elements.tabMenu) {
             System.out.println(tabMenu.getText());
             Assert.assertTrue(tabMenu.isDisplayed(), "Tab Menu görüntülenemedi.");
         }
+
+        actionDriver.moveToElement(elements.computers).
+                moveToElement(elements.dekstops).click().build().perform();
+        wait.until(ExpectedConditions.urlContains("desktops"));
+
+        myJSClick(elements.buildComp);
+        elements.ramSelect();
 
 
     }
