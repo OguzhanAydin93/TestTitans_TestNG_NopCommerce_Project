@@ -6,6 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
+import static Utility.BaseDriver.driver;
+
 public class Zehra_POM {
     public Zehra_POM() {
         PageFactory.initElements(BaseDriver.driver,this);
@@ -18,9 +22,13 @@ public class Zehra_POM {
     public WebElement password;
     @FindBy(css = "[class='button-1 login-button']")
     public WebElement submitLogin;
+    @FindBy(css = "[class='header-menu']")
+    public List<WebElement> tabMenu;
 
-    public void Login(){
+    public void login(){
+        driver.navigate().to("https://demo.nopcommerce.com/");
         BaseDriver baseDriver=new BaseDriver();
+
 
        baseDriver.myClick(loginButton);
        BaseDriver.wait.until(ExpectedConditions.urlContains("login"));

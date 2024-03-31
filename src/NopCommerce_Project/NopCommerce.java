@@ -2,6 +2,7 @@ package NopCommerce_Project;
 
 import Utility.BaseDriver;
 import com.beust.ah.A;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -123,6 +124,14 @@ public class NopCommerce extends BaseDriver {
 
     @Test
     public void US_507_Zehra(){
+        Zehra_POM elements=new Zehra_POM();
+        elements.login();
+
+        for (WebElement tabMenu : elements.tabMenu) {
+            System.out.println(tabMenu.getText());
+            Assert.assertTrue(tabMenu.isDisplayed(), "Tab Menu görüntülenemedi.");
+        }
+
 
     }
 
