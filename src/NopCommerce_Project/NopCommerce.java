@@ -79,6 +79,11 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.electronics);
         myAssert(elements.pageText,"Electronics");
         myClick(elements.logo);
+        actions.moveToElement(elements.electronics).build().perform();
+        actions.moveToElement(elements.cameraAndPhoto).click().perform();
+        myAssert(elements.pageText,"Camera & photo");
+        myClick(elements.logo);
+
 
 
 
