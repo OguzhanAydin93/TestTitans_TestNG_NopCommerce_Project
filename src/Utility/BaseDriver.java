@@ -7,8 +7,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import java.time.Duration;
@@ -68,10 +70,17 @@ public class BaseDriver {
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
-    public static void JSClick(WebElement e){
+    public void myJSClick(WebElement element){
         JavascriptExecutor js=(JavascriptExecutor) BaseDriver.driver;
-        js.executeScript("arguments[0].click();", e);
+        js.executeScript("arguments[0].click();", element);
     }
+
+    public void myAssert(WebElement element, String text){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
+        Assert.assertTrue(element.getText().contains(text),"Bu Sayfada Değilsiniz");
+    }
+
 
 
     @AfterClass
@@ -94,4 +103,6 @@ public class BaseDriver {
 
         logger.warn("WARN : Metod bitti, hata oluşmuş olsa idi");
     }
+
+
 }

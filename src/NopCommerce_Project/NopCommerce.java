@@ -1,6 +1,9 @@
 package NopCommerce_Project;
 
 import Utility.BaseDriver;
+import com.beust.ah.A;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -50,6 +53,70 @@ public class NopCommerce extends BaseDriver {
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
+
+        driver.get("https://demo.nopcommerce.com/");
+        Actions actions=new Actions(driver);
+
+        myClick(elements.login);
+        mySendKeys(elements.email,"techno+1@gmail.com");
+        mySendKeys(elements.password,"123456");
+        myClick(elements.loginButton);
+        myClick(elements.computers);
+        myAssert(elements.pageText,"Computers");
+        myClick(elements.logo);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.desktops).click().perform();
+        myAssert(elements.pageText,"Desktops");
+        myClick(elements.logo);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.notebooks).click().perform();
+        myAssert(elements.pageText,"Notebooks");
+        myClick(elements.logo);
+        actions.moveToElement(elements.computers).build().perform();
+        actions.moveToElement(elements.software).click().perform();
+        myAssert(elements.pageText,"Software");
+        myClick(elements.logo);
+        myClick(elements.electronics);
+        myAssert(elements.pageText,"Electronics");
+        myClick(elements.logo);
+        actions.moveToElement(elements.electronics).build().perform();
+        actions.moveToElement(elements.cameraAndPhoto).click().perform();
+        myAssert(elements.pageText,"Camera & photo");
+        myClick(elements.logo);
+        actions.moveToElement(elements.electronics).build().perform();
+        actions.moveToElement(elements.cellPhone).click().perform();
+        myAssert(elements.pageText,"Cell phones");
+        myClick(elements.logo);
+        actions.moveToElement(elements.electronics).build().perform();
+        actions.moveToElement(elements.others).click().perform();
+        myAssert(elements.pageText,"Others");
+        myClick(elements.logo);
+        myClick(elements.apparel);
+        myAssert(elements.pageText,"Apparel");
+        myClick(elements.logo);
+        actions.moveToElement(elements.apparel).build().perform();
+        actions.moveToElement(elements.shoes).click().perform();
+        myAssert(elements.pageText,"Shoes");
+        myClick(elements.logo);
+        actions.moveToElement(elements.apparel).build().perform();
+        actions.moveToElement(elements.clothing).click().perform();
+        myAssert(elements.pageText,"Clothing");
+        myClick(elements.logo);
+        actions.moveToElement(elements.apparel).build().perform();
+        actions.moveToElement(elements.accessories).click().perform();
+        myAssert(elements.pageText,"Accessories");
+        myClick(elements.logo);
+        myClick(elements.digitalDownload);
+        myAssert(elements.digitalDownload,"Digital downloads");
+        myClick(elements.logo);
+        myClick(elements.books);
+        myAssert(elements.books,"Books");
+        myClick(elements.logo);
+        myClick(elements.jewelry);
+        myAssert(elements.jewelry,"Jewelry");
+        myClick(elements.logo);
+        myClick(elements.giftCards);
+        myAssert(elements.giftCards,"Gift Cards");
 
 
     }
