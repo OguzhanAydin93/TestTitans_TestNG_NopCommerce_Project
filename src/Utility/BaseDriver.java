@@ -75,6 +75,8 @@ public class BaseDriver {
     }
 
     public void myAssert(WebElement element, String text){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
         Assert.assertTrue(element.getText().contains(text),"Bu Sayfada Değilsiniz");
     }
 
@@ -99,4 +101,6 @@ public class BaseDriver {
 
         logger.warn("WARN : Metod bitti, hata oluşmuş olsa idi");
     }
+
+
 }

@@ -74,6 +74,9 @@ public class Oguzhan_POM {
     @FindBy(css = "//div[@class='page-title']/h1")
     public WebElement pageText;
 
+    @FindBy(css = "[class='header-logo']")
+    public WebElement logo;
+
 
 
 
