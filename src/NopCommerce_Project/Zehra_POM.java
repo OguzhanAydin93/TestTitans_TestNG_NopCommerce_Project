@@ -34,6 +34,8 @@ public class Zehra_POM {
     public WebElement buildComp;
     @FindBy(css = "[name='product_attribute_2']")
     public WebElement rams;
+    @FindBy(xpath = "//input[@name='product_attribute_3']")
+    public List<WebElement> hdd;
 
     public void login() {
         driver.navigate().to("https://demo.nopcommerce.com/");
@@ -53,14 +55,16 @@ public class Zehra_POM {
             baseDriver.myClick(ram);
             System.out.println(ram.getText());
         }
-        /*
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
-         */
+    }
+    public void hddSelect(){
+        BaseDriver baseDriver = new BaseDriver();
+        int rndmHdd = (int) (Math.random() * hdd.size());
+        WebElement hdds=hdd.get(rndmHdd);
+        System.out.println(hdds.getText());
+        baseDriver.myClick(hdds);
+
+
     }
 
 }

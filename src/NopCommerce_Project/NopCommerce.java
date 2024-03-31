@@ -139,6 +139,7 @@ public class NopCommerce extends BaseDriver {
 
         myJSClick(elements.buildComp);
         elements.ramSelect();
+        elements.hddSelect();
 
 
     }
