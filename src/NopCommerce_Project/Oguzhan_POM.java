@@ -20,7 +20,7 @@ public class Oguzhan_POM {
     @FindBy(css = "[id='Password']")
     public WebElement password;
 
-    @FindBy(linkText = "[class='button-1 login-button']")
+    @FindBy(css = "[class='button-1 login-button']")
     public WebElement loginButton;
 
     @FindBy(xpath = "//ul[@class='top-menu notmobile']/li[1]/a")
