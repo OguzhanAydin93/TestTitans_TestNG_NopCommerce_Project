@@ -19,33 +19,24 @@ public class NopCommerce extends BaseDriver {
     public void US_501_Nuri(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
 
-
         Nuri_POM elements = new Nuri_POM();
 
-        wait.until(ExpectedConditions.elementToBeClickable(elements.register));
-        elements.register.click();
-        wait.until(ExpectedConditions.elementToBeClickable(elements.gender));
-        elements.gender.click();
-        wait.until(ExpectedConditions.elementToBeClickable(elements.firstname));
-        elements.firstname.sendKeys("Teamtitans");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.lastname));
-        elements.lastname.sendKeys("Techno123");
+        myClick(elements.register);
+        myClick(elements.gender);
+        mySendKeys(elements.firstname,"TeamTitans");
+        mySendKeys(elements.lastname,"Techno123");
         Select day = new Select(elements.day);
         day.selectByIndex(5);
         Select month = new Select(elements.month);
         month.selectByValue("5");
         Select year = new Select(elements.year);
         year.selectByIndex(1);
-        wait.until(ExpectedConditions.elementToBeClickable(elements.email));
-        elements.email.sendKeys("techno+1@gmail.com");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.companyname));
-        elements.companyname.sendKeys("TestTitans");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.password));
-        elements.password.sendKeys("123456");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.confirmpassword));
-        elements.confirmpassword.sendKeys("123456");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.registerButton));
-        elements.registerButton.click();
+        mySendKeys(elements.email,"techno+1@gmail.com");
+        mySendKeys(elements.companyname,"TestTitans");
+        mySendKeys(elements.password,"123456");
+        mySendKeys(elements.confirmpassword,"123456");
+
+        myClick(elements.registerButton);
     }
 
 
