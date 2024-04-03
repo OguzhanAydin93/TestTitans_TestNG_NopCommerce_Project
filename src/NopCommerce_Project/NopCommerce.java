@@ -46,8 +46,8 @@ public class NopCommerce extends BaseDriver {
 
         wait.until(ExpectedConditions.elementToBeClickable(elements.loginBtn));
         elements.loginBtn.click();
-        mySendKeys(elements.email,"hatunyuksel.106@gmail.com");
-        mySendKeys(elements.password,"çaykuruüzüm");
+        mySendKeys(elements.email,"techno+1@gmail.com");
+        mySendKeys(elements.password,"123456");
         myClick(elements.loginButton);
 
     }
@@ -118,7 +118,6 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.logo);
         myClick(elements.giftCards);
         myAssert(elements.giftCards,"Gift Cards");
-
 
     }
 
