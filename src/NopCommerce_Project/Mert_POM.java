@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Parameters;
 
 public class Mert_POM {public Mert_POM()    {PageFactory.initElements(BaseDriver.driver,this);}
 
@@ -38,6 +39,7 @@ public class Mert_POM {public Mert_POM()    {PageFactory.initElements(BaseDriver
     public WebElement text;
 
 
+    @Parameters("browserTipi")
     public void Login(){
         Mert_POM elements=new Mert_POM();
         BaseDriver bd=new BaseDriver();
