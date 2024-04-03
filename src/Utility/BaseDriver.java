@@ -86,7 +86,7 @@ public class BaseDriver {
     }
 
 
-    @AfterClass(groups = )
+    @AfterClass()
     public void KapanisIslemleri() {
         driver.quit();
 
