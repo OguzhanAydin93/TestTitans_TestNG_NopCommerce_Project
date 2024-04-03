@@ -15,7 +15,6 @@
         <!--çalışacak classların yazıldığı bölüm-->
         <classes>
             <class name="NopCommerce_Project.NopCommerce"></class>
-            <class name="NopCommerce_Project.Mert_POM"></class>
         </classes>
 
 

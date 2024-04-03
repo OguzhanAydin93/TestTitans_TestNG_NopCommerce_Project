@@ -149,7 +149,7 @@ public class NopCommerce extends BaseDriver {
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();
-        elements.Login();
+        US_502_Hatun();
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchBox));
         mySendKeys(elements.searchBox,inputMsg);

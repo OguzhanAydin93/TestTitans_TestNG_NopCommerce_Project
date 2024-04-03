@@ -39,16 +39,4 @@ public class Mert_POM {public Mert_POM()    {PageFactory.initElements(BaseDriver
     public WebElement text;
 
 
-    @Parameters("browserTipi")
-    public void Login(){
-        Mert_POM elements=new Mert_POM();
-        BaseDriver bd=new BaseDriver();
-
-        bd.myClick(elements.loginButton);
-        BaseDriver.wait.until(ExpectedConditions.visibilityOf(elements.mailInput));
-        bd.mySendKeys(elements.mailInput,"techno+1@gmail.com");
-        bd.mySendKeys(elements.passwordInput,"123456");
-        bd.myClick(elements.logIn);
-
-    }
 }
