@@ -39,7 +39,7 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
-    @Test
+    @Test()
     public void US_502_Hatun(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
         Hatun_POM elements = new Hatun_POM();
@@ -54,7 +54,7 @@ public class NopCommerce extends BaseDriver {
 
 
 
-    @Test(groups = {"UITesting"})
+    @Test()
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
@@ -145,11 +145,18 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"Smoke,Regression,UITesting"})
+    @Test(groups = {"Smoke"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
-        US_502_Hatun();
         Mert_POM elements=new Mert_POM();
+
+        driver.navigate().to("https://demo.nopcommerce.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(elements.loginButton));
+        elements.loginButton.click();
+        mySendKeys(elements.mailInput,"techno+1@gmail.com");
+        mySendKeys(elements.passwordInput,"123456");
+        myClick(elements.logIn);
+
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchBox));
         mySendKeys(elements.searchBox,inputMsg);
