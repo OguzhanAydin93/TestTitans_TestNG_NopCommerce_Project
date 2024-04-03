@@ -8,7 +8,7 @@
         <!-- hangi gruplar çalıştırılacak-->
         <groups>
             <run>
-                <include name="Smoke,Regression,UITesting"></include>
+                <include name="Smoke"></include>
             </run>
         </groups>
 
