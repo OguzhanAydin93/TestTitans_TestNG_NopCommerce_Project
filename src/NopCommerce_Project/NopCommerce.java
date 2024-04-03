@@ -39,6 +39,19 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
+    @Test
+    public void US_502_Hatun(){
+        BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
+        Hatun_POM elements = new Hatun_POM();
+
+        wait.until(ExpectedConditions.elementToBeClickable(elements.loginBtn));
+        elements.loginBtn.click();
+        mySendKeys(elements.email,"hatunyuksel.106@gmail.com");
+        mySendKeys(elements.password,"çaykuruüzüm");
+        myClick(elements.loginButton);
+
+    }
+
 
 
     @Test
