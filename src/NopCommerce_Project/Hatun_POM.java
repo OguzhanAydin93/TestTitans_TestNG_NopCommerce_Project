@@ -8,11 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 import static Utility.BaseDriver.driver;
 
 public class Hatun_POM {
-    public Hatun_POM ()   {PageFactory.initElements(BaseDriver.driver,this);}
+    public Hatun_POM() {
+        PageFactory.initElements(BaseDriver.driver, this);
+    }
 
 
-
-    @FindBy (css = "[class='ico-login']")
+    @FindBy(css = "[class='ico-login']")
     public WebElement loginBtn;
 
     @FindBy(xpath = "//input[@id='Email']")
@@ -21,7 +22,7 @@ public class Hatun_POM {
     @FindBy(xpath = "//input[@id='Password']")
     public WebElement password;
 
-    @FindBy (css = "[class='button-1 login-button']")
+    @FindBy(css = "[class='button-1 login-button']")
     public WebElement loginButton;
 
 
@@ -34,9 +35,5 @@ public class Hatun_POM {
         baseDriver.myClick(loginButton);
 
 
-
-
-
-
-
+    }
 }
