@@ -54,7 +54,7 @@ public class NopCommerce extends BaseDriver {
 
 
 
-    @Test()
+    @Test(groups = {"Regression","UITesting","Tab Menu"})
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
