@@ -150,6 +150,7 @@ public class NopCommerce extends BaseDriver {
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();
+        elements.Login();
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchBox));
         mySendKeys(elements.searchBox,inputMsg);
@@ -161,11 +162,5 @@ public class NopCommerce extends BaseDriver {
 
         Assert.assertEquals(text,"Adobe Photoshop CS4");
 
-
-
-
-
     }
-
-
 }
