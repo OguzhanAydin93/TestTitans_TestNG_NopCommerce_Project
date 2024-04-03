@@ -145,7 +145,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"Smoke,Regression"})
+    @Test(groups = {"Smoke,Regression,UITesting"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();
