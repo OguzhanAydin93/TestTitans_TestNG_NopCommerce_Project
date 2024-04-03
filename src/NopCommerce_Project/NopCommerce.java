@@ -148,8 +148,8 @@ public class NopCommerce extends BaseDriver {
     @Test(groups = {"Smoke,Regression,UITesting"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
-        Mert_POM elements=new Mert_POM();
         US_502_Hatun();
+        Mert_POM elements=new Mert_POM();
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchBox));
         mySendKeys(elements.searchBox,inputMsg);
