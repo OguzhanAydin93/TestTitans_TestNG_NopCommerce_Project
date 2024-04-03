@@ -39,6 +39,15 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
+    @Test
+    public void US_502_Hatun(){
+        BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
+        Hatun_POM Hatun_POM = new Hatun_POM();
+
+
+
+    }
+
 
 
     @Test
