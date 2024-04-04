@@ -8,7 +8,7 @@
         <!-- hangi gruplar çalıştırılacak-->
         <groups>
             <run>
-                <include name="Smoke"></include>
+                <include name="Registiration"></include>
             </run>
         </groups>
 

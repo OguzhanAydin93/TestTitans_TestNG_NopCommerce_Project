@@ -7,7 +7,7 @@
         <!-- hangi gruplar çalıştırılacak-->
         <groups>
             <run>
-                <include name="UITesting"></include>
+                <include name="TAB Menu Testing"></include>
             </run>
         </groups>
 

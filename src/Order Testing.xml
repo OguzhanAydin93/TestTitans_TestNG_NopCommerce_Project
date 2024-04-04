@@ -7,7 +7,7 @@
         <!-- hangi gruplar çalıştırılacak-->
         <groups>
             <run>
-                <include name="UITesting"></include>
+                <include name="Order Testing"></include>
             </run>
         </groups>
 
