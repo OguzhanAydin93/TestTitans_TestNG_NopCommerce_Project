@@ -8,6 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,46 +16,87 @@ import org.testng.annotations.Test;
 
 public class NopCommerce extends BaseDriver {
 
-    @Test(groups ={"Registiration","Smoke"})
-    public void US_501_Nuri(){
+    @Test(groups = {"Registiration", "Smoke"})
+    public void US_501_Nuri() {
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
 
         Nuri_POM elements = new Nuri_POM();
 
         myClick(elements.register);
         myClick(elements.gender);
-        mySendKeys(elements.firstname,"TeamTitans");
-        mySendKeys(elements.lastname,"Techno123");
+        mySendKeys(elements.firstname, "TeamTitans");
+        mySendKeys(elements.lastname, "Techno123");
         Select day = new Select(elements.day);
         day.selectByIndex(5);
         Select month = new Select(elements.month);
         month.selectByValue("5");
         Select year = new Select(elements.year);
         year.selectByIndex(1);
-        mySendKeys(elements.email,"techno+1@gmail.com");
-        mySendKeys(elements.companyname,"TestTitans");
-        mySendKeys(elements.password,"123456");
-        mySendKeys(elements.confirmpassword,"123456");
+        mySendKeys(elements.email, "techno+1@gmail.com");
+        mySendKeys(elements.companyname, "TestTitans");
+        mySendKeys(elements.password, "123456");
+        mySendKeys(elements.confirmpassword, "123456");
 
         myClick(elements.registerButton);
     }
 
-    @Test(groups = {"Login Test","Smoke"})
-    public void US_502_Hatun(){
+    @Test(groups = {"Login Test", "Smoke"})
+    public void US_502_Hatun() {
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
         Hatun_POM elements = new Hatun_POM();
 
         wait.until(ExpectedConditions.elementToBeClickable(elements.loginBtn));
         elements.loginBtn.click();
-        mySendKeys(elements.email,"techno+1@gmail.com");
-        mySendKeys(elements.password,"123456");
+        mySendKeys(elements.email, "techno+1@gmail.com");
+        mySendKeys(elements.password, "123456");
         myClick(elements.loginButton);
+        myClick(elements.logOut);
 
     }
-    //@Test(groups = {"Login Test","Smoke"},priority = 3)
-    //public void US_503_Nuri_Hatun(){
 
-    //}
+    @Test(groups = "Login Test")
+    public void US_503_Nuri_Hatun(String email, String Password) {
+        driver.get("https://demo.nopcommerce.com/");
+        Hatun_POM elements = new Hatun_POM();
+
+        myClick(elements.loginBtn);
+        mySendKeys(elements.email, "techno+1@gmail.com");
+        mySendKeys(elements.password, "123456");
+        myClick(elements.loginButton);
+
+        //  if (
+        //         ((email.equals("admin")) ||
+        //                 (email.equals("admin1")) ||
+        //                (email.equals("admin3")) ||
+        //               (email.equals("admin5")) ||
+        //                (email.equals("admin7")) ||
+        //                (email.equals("admin9")))
+        //                &&
+        //                Password.equals("admin1")) {
+        //    Assert.assertTrue(elements.alertDanger.getText().toLowerCase().contains("ınvalid"));
+        //} else if (email.equals("techno+1@gmail.com") && Password.equals("123456")) {
+        //    Assert.assertTrue(elements.loginAccount.getText().contains("Logged"));
+
+ //   }
+}
+       // @DataProvider
+       // Object[][] basarisizGiris() {
+       //     Object[][] emailVeSifre =
+        //            {
+       //                     {"admin", "admin1"},
+       //                     {"admin1", "admin1"},
+       //                     {"admin3", "admin1"},
+       //                     {"admin5", "admin1"},
+       //                     {"admin7", "admin1"},
+       //                     {"admin9", "admin1"},
+       //                     {"techno+1@gmail.com", "Admin123"}
+       //             };
+       //     return emailVeSifre;
+   // }
+
+
+
+
 
 
 

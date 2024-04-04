@@ -25,6 +25,16 @@ public class Hatun_POM {
     @FindBy(css = "[class='button-1 login-button']")
     public WebElement loginButton;
 
+    // alert danger elementi eklendi.
+    @FindBy(xpath = "//div[contains(@class, 'alert-danger')]")
+    public WebElement alertDanger;
+    @FindBy(id = "loginAccount")
+    public WebElement loginAccount;
+
+    // logout elementi eklendi
+    @FindBy (css = ".ico-logout")
+    public WebElement logOut;
+
 
     public void login() {
         driver.navigate().to("https://demo.nopcommerce.com/");
