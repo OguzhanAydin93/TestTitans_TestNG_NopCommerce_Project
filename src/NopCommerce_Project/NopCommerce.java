@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class NopCommerce extends BaseDriver {
 
-    @Test(groups ={"Registiration","Smoke"})
+    @Test(groups ={"Registiration","Smoke"},priority = 1)
     public void US_501_Nuri(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
 
@@ -39,7 +39,7 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
-    @Test(groups = {"Login Test","Smoke"})
+    @Test(groups = {"Login Test","Smoke"},priority = 2)
     public void US_502_Hatun(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
         Hatun_POM elements = new Hatun_POM();
@@ -51,17 +51,21 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.loginButton);
 
     }
+    @Test(groups = {"Login Test","Smoke"},priority = 3)
+    public void US_503_Nuri_Hatun(){
+
+    }
 
 
 
-    @Test(groups = {"UITesting","TAB Menu Testing"})
+    @Test(groups = {"UITesting","TAB Menu Testing"},priority = 4)
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
 
         Actions actions=new Actions(driver);
 
-        elements.login();
+
         myClick(elements.computers);
         myAssert(elements.pageText,"Computers");
         myClick(elements.logo);
@@ -121,11 +125,10 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"UITesting","TAB Menu Testing","Order Testing"})
+    @Test(groups = {"UITesting","TAB Menu Testing","Order Testing"},priority = 7)
     public void US_507_Zehra(){
         Zehra_POM elements=new Zehra_POM();
         Actions actionDriver = new Actions(driver);
-        elements.login();
 
         for (WebElement tabMenu : elements.tabMenu) {
             System.out.println(tabMenu.getText());
@@ -145,22 +148,16 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"Smoke","Regression","UITesting","Search Testing"},testName = "Test_508")
+    @Test(groups = {"Smoke","Regression","UITesting","Search Testing"},priority = 8)
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();
 
-        driver.navigate().to("https://demo.nopcommerce.com/");
-        wait.until(ExpectedConditions.elementToBeClickable(elements.loginButton));
-        elements.loginButton.click();
-        mySendKeys(elements.mailInput,"techno+1@gmail.com");
-        mySendKeys(elements.passwordInput,"123456");
-        myClick(elements.logIn);
-
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchBox));
         mySendKeys(elements.searchBox,inputMsg);
-        myClick(elements.searchButton);
+        BaseDriver.wait.until(ExpectedConditions.elementToBeClickable(elements.searchButton));
+        myJSClick(elements.searchButton);
         wait.until(ExpectedConditions.elementToBeClickable(elements.productTitle));
         myClick(elements.productTitle);
 
