@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class NopCommerce extends BaseDriver {
 
-    @Test
+    @Test(groups ={"Registiration","Smoke"})
     public void US_501_Nuri(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
 
@@ -39,7 +39,7 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
-    @Test()
+    @Test(groups = {"Login Test","Smoke"})
     public void US_502_Hatun(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
         Hatun_POM elements = new Hatun_POM();
@@ -54,7 +54,7 @@ public class NopCommerce extends BaseDriver {
 
 
 
-    @Test(groups = {"Regression","UITesting","Tab Menu"})
+    @Test(groups = {"UITesting","TAB Menu Testing"})
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
@@ -121,7 +121,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test
+    @Test(groups = {"UITesting","TAB Menu Testing","Order Testing"})
     public void US_507_Zehra(){
         Zehra_POM elements=new Zehra_POM();
         Actions actionDriver = new Actions(driver);
@@ -145,7 +145,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"Smoke"})
+    @Test(groups = {"Smoke","Regression","UITesting","Search Testing"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();

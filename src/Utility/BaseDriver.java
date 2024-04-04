@@ -26,7 +26,7 @@ public class BaseDriver {
     public static WebDriver driver;
 
 
-    @BeforeClass(groups ={"Smoke","Regression","UITesting"})
+    @BeforeClass(groups ={"Smoke","Regression","UITesting","Registiration","Login Test","TAB Menu Testing","Search Testing","Order Testing"})
     @Parameters("browserTipi")
     public void BaslangicIslemleri(String browserTipi) {
 
@@ -86,7 +86,7 @@ public class BaseDriver {
     }
 
 
-    @AfterClass()
+    @AfterClass(groups = {"Smoke","Regression","UITesting","Registiration","Login Test","TAB Menu Testing","Search Testing","Order Testing"})
     public void KapanisIslemleri() {
         driver.quit();
 
