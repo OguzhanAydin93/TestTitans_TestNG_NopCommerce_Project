@@ -76,6 +76,7 @@ public class BaseDriver {
 
     public void myJSClick(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) BaseDriver.driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
         js.executeScript("arguments[0].click();", element);
     }
 
