@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class NopCommerce extends BaseDriver {
 
-    @Test(groups ={"Registiration","Smoke"},priority = 1)
+    @Test(groups ={"Registiration","Smoke"})
     public void US_501_Nuri(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
 
@@ -39,7 +39,7 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.registerButton);
     }
 
-    @Test(groups = {"Login Test","Smoke"},priority = 2)
+    @Test(groups = {"Login Test","Smoke"})
     public void US_502_Hatun(){
         BaseDriver.driver.navigate().to("https://demo.nopcommerce.com/");
         Hatun_POM elements = new Hatun_POM();
@@ -51,14 +51,14 @@ public class NopCommerce extends BaseDriver {
         myClick(elements.loginButton);
 
     }
-    @Test(groups = {"Login Test","Smoke"},priority = 3)
-    public void US_503_Nuri_Hatun(){
+    //@Test(groups = {"Login Test","Smoke"},priority = 3)
+    //public void US_503_Nuri_Hatun(){
 
-    }
+    //}
 
 
 
-    @Test(groups = {"UITesting","TAB Menu Testing"},priority = 4)
+    @Test(groups = {"UITesting","TAB Menu Testing"})
     public void US_504_Oguzhan(){
 
         Oguzhan_POM elements=new Oguzhan_POM();
@@ -125,7 +125,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"UITesting","TAB Menu Testing","Order Testing"},priority = 7)
+    @Test(groups = {"UITesting","TAB Menu Testing","Order Testing"})
     public void US_507_Zehra(){
         Zehra_POM elements=new Zehra_POM();
         Actions actionDriver = new Actions(driver);
@@ -148,7 +148,7 @@ public class NopCommerce extends BaseDriver {
 
     }
 
-    @Test(groups = {"Smoke","Regression","UITesting","Search Testing"},priority = 8)
+    @Test(groups = {"Smoke","Regression","UITesting","Search Testing"})
     @Parameters("message")
     public void US_508_Mert(String inputMsg){
         Mert_POM elements=new Mert_POM();
