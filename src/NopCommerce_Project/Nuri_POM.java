@@ -44,4 +44,5 @@ public class Nuri_POM {
 
     @FindBy(xpath = "//button[@id='register-button']")
     public WebElement registerButton;
+
 }
