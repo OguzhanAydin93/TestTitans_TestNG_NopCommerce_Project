@@ -32,8 +32,14 @@ public class Hatun_POM {
     public WebElement loginAccount;
 
     // logout elementi eklendi
-    @FindBy (css = ".ico-logout")
+    @FindBy (css = "[class='ico-logout']")
     public WebElement logOut;
+
+    @FindBy (css = "[id='Email-error']")
+    public WebElement alert1;
+
+    @FindBy (css = "[class='ico-account']")
+    public WebElement confirmLogin;
 
 
     public void login() {
