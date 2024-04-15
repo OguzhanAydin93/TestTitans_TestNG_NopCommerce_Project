@@ -190,6 +190,27 @@ public class NopCommerce extends BaseDriver {
 
     }
 
+    @Test(groups = {"UITesting", "TAB Menu Testing", "Order Testing"})
+    public void US_506_Asli() {
+
+        Asli_POM elements = new Asli_POM();
+
+        elements.loginFunctionality();
+
+        wait.until(ExpectedConditions.visibilityOf(elements.giftcards));
+        myClick(elements.giftcards);
+
+        myClick(elements.urun1);
+        wait.until(ExpectedConditions.visibilityOf(elements.recName));
+        mySendKeys(elements.recName, "zeynep");
+        mySendKeys(elements.recEmail, "zeynep0@gmail.com");
+        mySendKeys(elements.sender, "Aslı");
+        mySendKeys(elements.senderEmail, "aslicelikz@outlook.com");
+        myClick(elements.add);
+
+        Assert.assertTrue(elements.msg.isDisplayed(), "The product has been added to your ");
+    }
+
 
 
 
