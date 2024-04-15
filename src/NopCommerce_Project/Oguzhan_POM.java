@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 import static Utility.BaseDriver.driver;
 
 public class Oguzhan_POM {
@@ -81,6 +83,27 @@ public class Oguzhan_POM {
 
     @FindBy(css = "[class='header-logo']")
     public WebElement logo;
+
+
+//    ****************************
+
+    @FindBy(xpath = "//a[text()='Computers ']")
+    public WebElement computerTab;
+
+
+    @FindBy(xpath = "//a[text()='Notebooks ']")
+    public WebElement noteBooks;
+
+
+    @FindBy(xpath = "//h2[@class=\"product-title\"]")
+    public List<WebElement> noteBooksAll;
+
+
+    @FindBy(xpath = "//input[@id=\"small-searchterms\"]")
+    public WebElement searcButton;
+
+    @FindBy(xpath = "/html/body")
+    public WebElement pageText2;
 
     public void login() {
         driver.navigate().to("https://demo.nopcommerce.com/");

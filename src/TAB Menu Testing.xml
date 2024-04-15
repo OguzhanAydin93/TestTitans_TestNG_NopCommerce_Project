@@ -3,6 +3,7 @@
 <suite name="my suit">
     <test name="test1">
         <parameter name="browserTipi" value="chrome"></parameter>
+        <parameter name="searchText" value="HP Envy 6-1180ca 15.6-Inch Sleekbook"></parameter>
 
         <!-- hangi gruplar çalıştırılacak-->
         <groups>
