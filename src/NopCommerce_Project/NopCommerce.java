@@ -103,6 +103,7 @@ public class NopCommerce extends BaseDriver {
 
         Actions actions = new Actions(driver);
 
+        elements.login();
 
         myClick(elements.computers);
         myAssert(elements.pageText, "Computers");
@@ -194,8 +195,6 @@ public class NopCommerce extends BaseDriver {
     public void US_506_Asli() {
 
         Asli_POM elements = new Asli_POM();
-
-        elements.loginFunctionality();
 
         wait.until(ExpectedConditions.visibilityOf(elements.giftcards));
         myClick(elements.giftcards);

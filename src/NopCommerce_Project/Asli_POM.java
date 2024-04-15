@@ -58,13 +58,13 @@ public class Asli_POM {
     public WebElement msg;
 
 
-    public void loginFunctionality() {
+    public void login() {
         driver.navigate().to("https://demo.nopcommerce.com/");
         BaseDriver baseDriver = new BaseDriver();
         baseDriver.myClick(loginButton);
-        baseDriver.mySendKeys(email, "aslicelikz@outlook.com");
-        baseDriver.mySendKeys(password, "asli2003");
-        baseDriver.myClick(loggedIn);
+        baseDriver.mySendKeys(email, "techno+1@gmail.com");
+        baseDriver.mySendKeys(password, "123456");
+        baseDriver.myClick(loginButton);
 
     }
 }
